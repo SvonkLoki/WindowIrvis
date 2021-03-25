@@ -41,6 +41,8 @@ const forms = (state) => {
             if (item.getAttribute('data-calc') === 'end') {
                 for (let key in state) {
                     formData.append(key, state[key]);
+                    delete state[key];
+                    delete state.key;
                 }
             }
 
